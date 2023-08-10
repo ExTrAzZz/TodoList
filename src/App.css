@@ -1,5 +1,16 @@
-.App {
-  text-align: center;
+* {
+  font-family: FontAwesome;
+  font-size: 16px;
+}
+
+input {
+  all: unset;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .App-logo {
@@ -35,4 +46,35 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.todo-list__content{
+  display: flex;
+  align-items: center;
+  border: 1px solid #000000;
+  margin-bottom: 10px;
+}
+
+.input-todo__wrapper {
+  display: block;
+}
+
+.input-todo {
+  padding-right: 2px;
+  white-space: nowrap; /* Текст не переносится */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+}
+
+
+
+.dragger {
+  position: absolute;
+  cursor: col-resize;
+  right: 0px;
+  top: -2px;
+  background-color: #000000;
+  width: 1px;
+  height: 100%;
+  margin: 0;
 }

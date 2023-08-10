@@ -1,0 +1,73 @@
+.button-todo__wrapper {
+    display: flex;
+    align-items: center;
+    padding-left: 10px
+}
+
+.change-button {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: #0563af;
+    border: solid 1px #0563af; 
+    color: #ffff;
+}
+
+.change-button:hover, .button-order__change:hover {
+    background-color: #ffff;
+    color: #0563af;
+}
+
+.delete-button {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+.delete-button:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.delete-button:before, .delete-button:after {
+    top:0;
+    position: absolute;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #ff0000;
+}
+.delete-button:before {
+    transform: rotate(45deg);
+}
+.delete-button:after {
+    transform: rotate(-45deg);
+}
+.button-order__change {
+    cursor: pointer;
+    color: #ffff;
+    background-color: #0563af;
+    border: solid 1px #0563af; 
+    height: 30px;
+    width: 30px;
+    border-radius: 2px;
+}
+.button-todo__wrapper .button-order__change:nth-child(odd) {
+    margin-right: 10px;
+}
+.create-todo{
+    cursor: pointer;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #48c774;
+    color: #ffff;
+    font-size: 32px;
+
+}
+.create-todo:hover {
+    background-color:#008000;
+}
+.create-todo__icon {
+    margin-right: 5px;
+}
