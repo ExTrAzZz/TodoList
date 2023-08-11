@@ -29,7 +29,7 @@ function orderTodo(list, place, {change, setChange}, index) {
                 if (change.changeField === index) // Редактируется TODO, которое мы перемещаем
                     setChange({...change, changeField: index-1}) // Изменение редактируемого поля
                 else if (change.changeField === index-1) // Дочернее поле при изменении порядка
-                        setChange({change, changeField: index})
+                    setChange({change, changeField: index})
             list.setTodo([...list.todo]) // Обновление списка
         } 
     } else if (place === 'down') { // Перемещение TODO ниже

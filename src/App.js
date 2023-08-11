@@ -13,8 +13,11 @@ function createTodo(list) {
 }
 
 function App() {
-  const [todo, setTodo] = useState([{descr:'привет', status:'здарова'},{descr:'привет2', status:'здарова'}]); // Список todo
-  const [searchInput, setSearchInput] = useState('') // Поиск
+  // Список todo
+  const [todo, setTodo] = useState([{descr:'привет', status:'здарова'},{descr:'привет2', status:'здарова'}]);
+  
+  // Поиск
+  const [searchInput, setSearchInput] = useState('')
   
   return (
       <div className="App">
