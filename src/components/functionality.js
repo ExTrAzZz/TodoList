@@ -42,7 +42,7 @@ export function resizeFrame(e, drag, dims, setDrag, setDims) {
 // Потеря фокуса из input TODO
 export function lostFocusTodo(list, setChange, inputState, index) {
   if (list.todo && list.todo[index] !== inputState) { // Есть различия в поле TODO и хранимом State
-    list.todo[index] = inputState // Запись данных из заполняемого поля
+    list.todo[index].descr = inputState.descr // Запись данных из заполняемого поля
     list.setTodo([...list.todo])
   }
   setChange({changeField: null, isChange: false})

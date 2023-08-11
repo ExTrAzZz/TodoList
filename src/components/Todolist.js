@@ -49,7 +49,7 @@ export const Todolist = ({list, searchInput}) => {
     if (element.descr.includes(searchInput))
       res.push(
         <div key={i} className='todo-list__content'>
-            <StatusTodo />
+            <StatusTodo list={list} index={i} />
             <div 
               className='input-todo__wrapper'  
               style={{position:"relative"}}

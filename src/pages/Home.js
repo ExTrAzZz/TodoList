@@ -9,7 +9,7 @@ function createTodo(list) {
 
 const Home = () => {
     // Список todo
-  const [todo, setTodo] = useState([{descr:'привет', status:'Выполнено'},{descr:'привет2', status:'здарова'}]);
+  const [todo, setTodo] = useState([{descr:'привет', status:'Выполнено'},{descr:'Home', status:'что то'}]);
   
   // Поиск
   const [searchInput, setSearchInput] = useState('')

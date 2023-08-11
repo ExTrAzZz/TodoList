@@ -2,11 +2,11 @@ import "../assets/styles/ButtonTodo.css"
 
 export function editTodo(list, input, {change, setChange}, index) {
     if (change.isChange && change.changeField !== index) { // Если до этого было открыто поле (другое)
-        list.todo[change.changeField] = input.inputState;
+        list.todo[change.changeField].descr = input.inputState;
         list.setTodo([...list.todo]); // Вносим то изменение в state менеджер
     } else if (change.changeField === index) return // Нажали по полю которое уже редактируется
     setChange({changeField:index, isChange:true});
-    input.setInputState(list.todo[index]);
+    input.setInputState({...list.todo[index]});
 }
 
 export function deleteTodo(list, input, {change, setChange}, index) {
