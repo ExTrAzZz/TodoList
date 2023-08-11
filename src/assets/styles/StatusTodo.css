@@ -5,8 +5,9 @@
   }
   .box select {
     background-color: #0563af;
+    height: 33px;
     color: #919192;
-    padding: 8px;
+    padding: 8px 4px;
     width: 100px;
     border: none;
     font-size: 12px;

@@ -27,9 +27,12 @@ export function startResize(e, setDrag) {
 export function resizeFrame(e, drag, dims, setDrag, setDims) {
     const { active, x} = drag;
     if (active) {
-        const xDiff = Math.abs(x - e.clientX);
+        // Смещение по оси X
+        const xDiff = Math.abs(x - e.clientX); 
+        // Определение изменения размера окна
         const newW = x > e.clientX ? dims.w - xDiff : dims.w + xDiff;
-        if ((window.innerWidth - document.querySelector('.button-todo__wrapper').offsetWidth) > e.pageX+2) {
+        const rect = document.querySelector('.input-todo').getBoundingClientRect();
+        if ((window.innerWidth - document.querySelector('.button-todo__wrapper').offsetWidth) > e.pageX+2 && (rect && rect.x+30 < e.pageX)) {
             setDrag({ ...drag, x: e.clientX});
             setDims({ w: newW });
         }

@@ -1,8 +1,9 @@
+import { useEffect, useRef } from "react";
 import "../assets/styles/StatusTodo.css"
 
 function changeDropDown(e) {
     let color
-    switch(e.target.value){
+    switch(e.value){
         case "В процессе": 
             color = "#FFB841";
             break
@@ -12,18 +13,23 @@ function changeDropDown(e) {
         default:
             color = "#919192";
     }
-    e.target.style.color = color;
+    e.parentNode.parentNode.childNodes[1].style.backgroundColor = color;
+    e.style.color = color;
 }
 
 export const StatusTodo = () => {
-   
-        return (
-        <div className="box">
-            <select onChange={(e) => changeDropDown(e)}>
-                <option>Ожидает</option>
-                <option>В процессе</option> 
-                <option>Выполнено</option> 
-            </select>
-        </div>)
+    const ref = useRef(null)
+    useEffect(() => {
+        changeDropDown(ref.current)
+    }, [])
+
+    return (
+    <div className="box">
+        <select ref={ref} onChange={(e) => changeDropDown(e.target)}>
+            <option>Ожидает</option>
+            <option>В процессе</option> 
+            <option>Выполнено</option> 
+        </select>
+    </div>)
         
 }

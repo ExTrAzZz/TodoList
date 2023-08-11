@@ -1,0 +1,11 @@
+.input-todo__search {
+    display: inline-block;
+    border: 1px solid #000000;
+    border-radius: 2px;
+    margin: 10px 0px;
+    font-family: 'Roboto';
+}
+.search-input__wrapper {
+    display: flex;
+    justify-content: center;
+}
