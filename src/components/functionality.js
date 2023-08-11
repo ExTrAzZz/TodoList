@@ -1,4 +1,4 @@
-import { editTodo } from "./Button/ButtonTodo";
+import { editTodo } from "./ButtonTodo";
 
 let timer;
 

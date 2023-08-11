@@ -1,4 +1,4 @@
-import "./ButtonTodo.css"
+import "../assets/styles/ButtonTodo.css"
 
 export function editTodo(list, input, {change, setChange}, index) {
     if (change.isChange && change.changeField !== index) { // Если до этого было открыто поле (другое)

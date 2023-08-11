@@ -1,4 +1,4 @@
-import "./statusTodo.css"
+import "../assets/styles/StatusTodo.css"
 
 function changeDropDown(e) {
     let color

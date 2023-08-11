@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ButtonTodo} from "./Button/ButtonTodo";
-import { StatusTodo } from "./Status/StatusTodo";
+import { ButtonTodo} from "./ButtonTodo";
+import { StatusTodo } from "./StatusTodo";
 import { lostFocusTodo, onDoubleClick, resizeFrame, startResize, stopResize } from "./functionality";
 
 
@@ -8,7 +8,7 @@ export const Todolist = ({list, searchInput}) => {
     // Состояние редактируемого TODO
     const [change, setChange] = useState({changeField:null, isChange:false}) 
     const [inputState, setInputState] = useState({})
-    console.log(1)
+    
     // Состояние движения ползунка
     const [drag, setDrag] = useState({ 
         active: false,
@@ -43,7 +43,7 @@ export const Todolist = ({list, searchInput}) => {
       if (element.descr.includes(searchInput))
         res.push(
           <div key={i} className='todo-list__content' onMouseMove={(e) => resizeFrame(e, drag, dims, setDrag, setDims)} onMouseUp={(e) => stopResize(e, {drag, setDrag})}>
-              <StatusTodo /> 
+              <StatusTodo />
               <div className='input-todo__wrapper'  style={{position:"relative"}}> 
                 {
                   // Если редактируется отрисовываемое поле
